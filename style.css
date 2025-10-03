@@ -1,0 +1,383 @@
+
+/* Variables de couleurs */
+:root {
+    --primary-color: #E74C3C; /* Rouge */
+    --secondary-color: #2C3E50; /* Noir/Gris foncé pour le texte */
+    --text-color: #333;
+    --light-color: #FFFFFF; /* Blanc */
+    --dark-color: #000000; /* Noir */
+}
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* En-tête */
+header {
+    background: var(--dark-color);
+    color: var(--light-color);
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Ajustez la taille du logo si nécessaire */
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #C0392B; /* Rouge plus foncé */
+}
+
+.secondary-btn {
+    background: var(--dark-color);
+    border: 1px solid var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background: var(--primary-color);
+    color: var(--light-color);
+}
+
+/* Sections */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+/* Section Héro */
+.hero-section {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Section Produits */
+.products-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Section Partenaires */
+.partners-section .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Pied de page */
+footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer .social-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+.social-links .social-icon {
+    width: 30px; /* Ajustez la taille des icônes */
+    height: 30px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+
+/* Styles pour les pages intérieures */
+.page-header {
+    background: var(--secondary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+}
+
+/* Navigation active */
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* Section Boutique */
+.shop-section {
+    padding: 60px 0;
+}
+
+.shop-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Styles pour les produits */
+.product-item {
+    background: var(--light-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.product-item .price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Section Partenaires détaillée */
+.partners-detail-section {
+    padding: 60px 0;
+}
+
+.partners-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.partner-detail-item {
+    background: var(--light-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-detail-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.partner-detail-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.partner-detail-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.partner-detail-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 60px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire de contact */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
